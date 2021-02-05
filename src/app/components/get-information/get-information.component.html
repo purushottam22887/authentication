@@ -1,0 +1,15 @@
+<div class="card" style="width: 70%; margin:auto; margin-top:5%;">
+    <div class="card-header">
+        <h2>Global Identity API Authentication</h2>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Enter your email address</h5>
+      <p class="card-text">
+        <input type="email" placeholder="Enter email here" [(ngModel)]="email" class="form-control"/>
+      </p>
+      <button class="btn btn-primary" (click)="onSubmit(email)">Submit</button>
+    </div>
+    <div class="card-footer" *ngIf="signature">
+        {{signature | json}}
+    </div>
+  </div>
