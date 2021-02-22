@@ -11,5 +11,14 @@
     </div>
     <div class="card-footer" *ngIf="signature">
         {{signature | json}}
+        <div>
+          <label for="Cookie">Cookie Name</label>
+          <input type="text" [(ngModel)]="cookieName" id="cookie"/>
+        </div>
+        <button class="btn btn-secondary" (click)="getCookieValue(cookieName)">Get Cookie</button>
+        <div>
+          {{cookie | json}}
+        </div>
     </div>
+    
   </div>

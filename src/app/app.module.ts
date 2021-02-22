@@ -11,6 +11,7 @@ import { GetInformationComponent } from './components/get-information/get-inform
 import { CardModule } from 'primeng/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DeviceDetectorService } from 'ngx-device-detector';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -26,10 +27,11 @@ import { DeviceDetectorService } from 'ngx-device-detector';
     FormsModule,
     ReactiveFormsModule,
     // MenubarModule,
-    CardModule
+    CardModule,
+    
   ],
   providers: [
-    DeviceDetectorService
+    DeviceDetectorService,CookieService
   ],
   bootstrap: [AppComponent]
 })
